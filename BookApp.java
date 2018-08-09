@@ -14,19 +14,15 @@ public class BookApp {
 		String cont = "";
 		int userNum;
 
-		//part 1 of lab
 		
-		// Book b = new Book ("1234567891", "Stephenie Meyer", "Twilight", 15.00); //my
-		// object
-		// books.add(b);
-		books.add((new Book("1234567891", "Stephenie Meyer", "Twilight", 15.00)));
-		books.add((new Book("2345678910", "Richelle Mead", "Vampire Academy", 20.00)));
-		books.add((new Book("3456789102", "Jim Butcher", "Changes", 18.50)));
-		books.add((new UsedBook("4578565554", "Nicholas Sparks", "The Last Song", 8.25, "new")));
-		books.add((new UsedBook("1089786565", "Tuesdays with Morrie", "Mitch Albom", 7.00, "very good")));
-		books.add((new UsedBook("5958746232", "The Medium", "C. J. Archer", 12.00, "acceptable")));
+		books.add((new Book("1234567891", "Agatha Christie", "Murder on the Orient Express", 15.00)));
+		books.add((new Book("2345678910", "Agatha Christie", "Evil Under the Sun", 20.00)));
+		books.add((new Book("3456789102", "Agatha Christie", "Death on the Nile", 18.50)));
+		books.add((new UsedBook("4578565554", "Agatha Christie", "Triangle in Rhodes", 8.25, "used")));
+		books.add((new UsedBook("1089786565", "Agatha Christie", "Death in the Clouds", 7.00, "acceptable")));
+		books.add((new UsedBook("5958746232", "Agatha Christie", "10 Little Indians", 12.00, "good")));
 
-		System.out.println("Which book would you like?");
+		System.out.println("Which book would you like to choose?");
 
 		do {
 			for (int i = 0; i < books.size(); i++) {
@@ -41,10 +37,10 @@ public class BookApp {
 			scan.nextLine(); // garbage line since going from int to string
 			String answer = scan.nextLine();
 			if (answer.equalsIgnoreCase("yes")) {
-				System.out.println("Awesome! We'll get that ready for you.");
+				System.out.println("Ok, thanks!");
 				books.remove(userNum - 1);
 
-				System.out.println("Buy another book? (yes/no)");
+				System.out.println("Would you like to choose another book? (yes/no)");
 				cont = scan.nextLine();
 				// System.out.println(books.get(userNum));
 			}
@@ -88,7 +84,7 @@ public class BookApp {
 
 			}
 		} while (cont.equalsIgnoreCase("yes"));
-		System.out.println("Goodbye!");
+		System.out.println("Goodbye!Come again");
 
 	}
 }
