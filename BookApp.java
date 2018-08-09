@@ -1,4 +1,4 @@
-package com.lab18;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -15,12 +15,12 @@ public class BookApp {
 		int userNum;
 
 		
-		books.add((new Book("1234567891", "Agatha Christie", "Murder on the Orient Express", 15.00)));
-		books.add((new Book("2345678910", "Agatha Christie", "Evil Under the Sun", 20.00)));
-		books.add((new Book("3456789102", "Agatha Christie", "Death on the Nile", 18.50)));
-		books.add((new UsedBook("4578565554", "Agatha Christie", "Triangle in Rhodes", 8.25, "used")));
-		books.add((new UsedBook("1089786565", "Agatha Christie", "Death in the Clouds", 7.00, "acceptable")));
-		books.add((new UsedBook("5958746232", "Agatha Christie", "10 Little Indians", 12.00, "good")));
+		books.add((new Book("567891", "Agatha Christie", "Murder on the Orient Express", 15.00)));
+		books.add((new Book("78910", "Agatha Christie", "Evil Under the Sun", 20.00)));
+		books.add((new Book("789102", "Agatha Christie", "Death on the Nile", 18.50)));
+		books.add((new UsedBook("565554", "Agatha Christie", "Triangle in Rhodes", 8.25, "used")));
+		books.add((new UsedBook("86565", "Agatha Christie", "Death in the Clouds", 7.00, "acceptable")));
+		books.add((new UsedBook("546232", "Agatha Christie", "10 Little Indians", 12.00, "good")));
 
 		System.out.println("Which book would you like to choose?");
 
@@ -75,7 +75,7 @@ public class BookApp {
 					books.add(new UsedBook(isbnInput, authorInput, titleInput, priceInput, wearInput));
 
 				}
-				System.out.println("Again?(yes/no)");
+				System.out.println("Try again?(yes/no)");
 				cont = scan.nextLine();
 
 				for (Book b : books) {

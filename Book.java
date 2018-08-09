@@ -1,7 +1,7 @@
-package com.lab18;
+
 
 public class Book {
-	// helper class
+	
 	private String ISBN;
 	private String author;
 	private String title;
